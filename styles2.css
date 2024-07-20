@@ -1,0 +1,49 @@
+
+.hr1 {
+    
+    
+        height: 345px;
+        width: 1.6px;
+        background-color: black;
+        border: none;
+        position: absolute;
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Center vertically */
+      }
+  
+
+@media (max-width: 767px) {
+    .img1 {
+        max-width: 90px;
+        position: relative;
+        left: 170px;
+
+    }
+    .footer1 {
+        margin-top: -20px ;
+        margin-left: 200px;
+
+    }
+
+    .icon1 {
+       
+        margin-left: 110px;
+    }
+    .map1 {
+        margin-left: -110px;
+        
+    }
+    .hr1 {
+        visibility: hidden;
+    }
+}
+
+/*larger*/
+
+@media (min-width: 768px) {
+    .hr1 {
+      margin-top: 0;
+      left: 95%;
+      margin-left: -0.8px; 
+    }
+  }
