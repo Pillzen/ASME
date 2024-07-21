@@ -74,17 +74,24 @@
 
     }
 
-
-.team-member-name {
-      border: 2.2px solid white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .team-member-name {
     margin-top: 18px;
     margin-bottom: 10px;
-    font-size: 1.25rem; /* Default font size */
+    font-size: 1.25rem;
 }
 
 .team-member-contact {
-    font-size: 1rem; /* Default font size */
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .team-member-name {
+        font-size: 1rem; 
+    }
+
+    .team-member-contact {
+        font-size: 0.875rem; 
+    }
 }
 
     .navb {
@@ -113,16 +120,6 @@
 
     a:hover {
   text-decoration: none;
-}
-
-@media (max-width: 768px) {
-    .team-member-name {
-        font-size: 1rem; 
-    }
-
-    .team-member-contact {
-        font-size: 0.875rem; 
-    }
 }
     
   </style>
@@ -187,7 +184,8 @@
               <h4 class="team-member-name">Harikrishnan U</h4>
               <p class="team-member-contact">+91 7561013868<br>hk111771@gmail.com</p>
           </div>
-      </div>      
+      </div>
+      
       </div>
     </div>
   </div>
@@ -215,7 +213,7 @@
             </div>
             <div class="row">
               <div class="col-12 d-flex flex-wrap justify-content-around">
-                <button type="submit" class="btn btn-danger btn-block" style="max-width: 10px;">Send Message</button>
+                <button type="submit" class="btn btn-danger btn-block" style="max-width: 130px;">Send Message</button>
               </div>
             </div>
           </form>
