@@ -73,6 +73,20 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     }
+
+
+.team-member-name {
+      border: 2.2px solid white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 1.25rem; /* Default font size */
+}
+
+.team-member-contact {
+    font-size: 1rem; /* Default font size */
+}
+
     .navb {
       position: relative;
       left: -70px;
@@ -99,6 +113,16 @@
 
     a:hover {
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .team-member-name {
+        font-size: 1rem; 
+    }
+
+    .team-member-contact {
+        font-size: 0.875rem; 
+    }
 }
     
   </style>
@@ -154,18 +178,16 @@
         <h3 style="font-weight: 700">Student Coordinators</h3>
         <div class="row">
           <div class="col-6 mb-3">
-            <img src="./images/abhi.png" alt="Student 1" class="rounded-circle team-member" style="width:140px; height:140px; margin-top: 27px;">
-            <h4 style="margin-top: 18px ; margin-bottom: 10px;">Abhijith M B</h4>
-            <p>+91 8590923290<br>mbabhijith91@gmail.com</p>
-           
+              <img src="./images/abhi.png" alt="Student 1" class="rounded-circle team-member" style="width:140px; height:140px; margin-top: 27px;">
+              <h4 class="team-member-name">Abhijith M B</h4>
+              <p class="team-member-contact">+91 8590923290<br>mbabhijith91@gmail.com</p>
           </div>
           <div class="col-6 mb-3">
-            <img src="./images/hari.png" alt="Student 2" class="rounded-circle team-member" style="width:140px; height:140px; margin-top: 27px;">
-            <h4 style="margin-top: 18px; margin-top: 10px;">Harikrishnan U</h4>
-            <p>+91 7561013868<br>hk111771@gmail.com</p>
-            
+              <img src="./images/hari.png" alt="Student 2" class="rounded-circle team-member" style="width:140px; height:140px; margin-top: 27px;">
+              <h4 class="team-member-name">Harikrishnan U</h4>
+              <p class="team-member-contact">+91 7561013868<br>hk111771@gmail.com</p>
           </div>
-        </div>
+      </div>      
       </div>
     </div>
   </div>
@@ -193,7 +215,7 @@
             </div>
             <div class="row">
               <div class="col-12 d-flex flex-wrap justify-content-around">
-                <button type="submit" class="btn btn-danger btn-block" style="max-width: 140px;">Send Message</button>
+                <button type="submit" class="btn btn-danger btn-block" style="max-width: 10px;">Send Message</button>
               </div>
             </div>
           </form>
