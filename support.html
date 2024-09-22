@@ -90,59 +90,75 @@
 
         
 
+       
+        
+
+       
+
         .station {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 columns */
-            grid-template-rows: repeat(2, auto);   /* 2 rows */
-            gap: 20px;
-            max-width: 900px;
-            width: 100%;
-        }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+    grid-template-rows: auto;   /* Adjust rows based on content */
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+}
 
-        .card {
-            background-color: #f5d7bd;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            
-        }
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .station {
+        grid-template-columns: 1fr; /* 1 column for mobile view */
+    }
 
-        .card h3 {
-            margin-top: 0;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: #333;
-        }
+    .card {
+        width: 100%; /* Full width for mobile */
+    }
+}
 
-        .card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            
-        }
+.card {
+    background-color: #f5d7bd;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Default width */
+    margin: 0 auto; /* Center align */
+}
 
-        .card ul li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            font-size: 1rem;
-            color: #333;
-        }
+.card h3 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #333;
+}
 
-        .card ul li::before {
-            content: "🚌"; /* Bus icon */
-            margin-right: 10px;
-        }
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        /* For specific cards */
-        .card.nearest-airport ul li::before {
-            content: "✈️"; /* Airplane icon */
-        }
+.card ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #333;
+}
 
-        .card.nearest-railway ul li::before {
-            content: "🚆"; /* Train icon */
-        }
+.card ul li::before {
+    content: "🚌"; /* Bus icon */
+    margin-right: 10px;
+}
+
+/* For specific cards */
+.card.nearest-airport ul li::before {
+    content: "✈️"; /* Airplane icon */
+}
+
+.card.nearest-railway ul li::before {
+    content: "🚆"; /* Train icon */
+}
+
        
         .footer {
             background-color: #000;
