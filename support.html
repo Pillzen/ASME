@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-navbar {
+            width: 80%;
+        }
+        .custnav{
+            border-radius: 25px;
+            box-shadow: 2px 3px 8px 3px rgba(0, 0, 0, 0.449) inset;
+            padding: 10px 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-around;
+            font-weight: 600;
+            background-color: rgba(240, 248, 255, 0.801);
+        }
+        .navalign{
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .navbar-brand {
+            margin-right: 30px;
+        }
+        .navbar-nav .nav-link {
+            padding: 0 20px;
+        }
+       
+      
+        .hotel-card {
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+          }
+      
+          .hotel-details {
+            max-width: 60%;
+          }
+      
+          .hotel-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
+      
+          .location, .for-booking {
+            color: gray;
+          }
+      
+          .stars {
+            color: orange;
+            font-size: 1rem;
+          }
+      
+          .for-booking {
+            display: flex;
+            align-items: center;
+            color: green;
+          }
+      
+          .for-booking i {
+            margin-right: 5px;
+          }
+      
+          .image-placeholder {
+            background-color: #e0e0e0;
+            width: 200px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            color: gray;
+            border-radius: 10px;
+          }
+         
+         
+          
+
+
+
+        
+
+        .station {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-template-rows: repeat(2, auto);   /* 2 rows */
+            gap: 20px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: #f5d7bd;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+        }
+
+        .card ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .card ul li::before {
+            content: "🚌"; /* Bus icon */
+            margin-right: 10px;
+        }
+
+        /* For specific cards */
+        .card.nearest-airport ul li::before {
+            content: "✈️"; /* Airplane icon */
+        }
+
+        .card.nearest-railway ul li::before {
+            content: "🚆"; /* Train icon */
+        }
+       
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            
+          }
+          .footer a {
+            color: #fff;
+            margin: 0 10px;
+          }
+          .footer a:hover {
+            text-decoration: none;
+            color: #a4a4a5;
+          }
+          .footer .row div {
+            margin-bottom: 20px;
+          }
+
+    </style>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <div class="navbar-container fixed-top">
+        <div class="row d-flex align-items-center justify-content-center mw-100">
+            <div class="col-2 col-md-4 col-lg-2 d-flex align-items-center justify-content-center p-0 ml-auto">
+                <a href="index.html"><img src="./images1/asmelogo.png" alt="Logo" style="width: 100px;"></a>
+            </div>
+            <div class="col-8 col-md-8 col-lg-10 d-flex align-items-center justify-content-center p-0 mw-100 ml-auto">
+                <nav class="navbar  navbar-expand-lg navbar-expand-md navbar-light text-black mr-lg-5 pr-lg-5 custom-navbar d-flex align-items-center justify-content-center">
+                    <button class="navbar-toggler ml-auto bg-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgba(240, 248, 255, 0.473);">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="d-flex align-items-center justify-content-around navalign ">
+                        <div class="collapse navbar-collapse custnav bg-white" id="navbarNav" >
+                            <ul class="navbar-nav">
+                                <li class="nav-item custhead ml-2 mr-2"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item custhead ml-2 mr-2"><a class="nav-link" href="team.html">Team</a></li>
+                                <li class="nav-item custhead ml-2 mr-2"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                                <li class="nav-item custhead ml-2 mr-2"><a class="nav-link" href="events&achievement.html">Events & Achievements</a></li>
+                                <li class="nav-item custhead ml-2 mr-2"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item custhead ml-2 mr-2"><a class="nav-link" href="support.html">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>  
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container mt-5 py-4">
+        <h2 class=" d-flex align-items-center justify-content-center mt-5 " style="color: #333;">Nearest Transport Hubs</h2>
+        <div class="row mt-4">
+          <!-- Hotel Card 1 -->
+          <div class="col-md-6">
+            <div class="hotel-card">
+              <div class="hotel-details">
+                <div class="hotel-name">Uppercrest Residency Pala </div>
+                <div class="location">Palai</div>
+                <div class="stars">★ ★ ★  </div>
+                <div class="for-booking">
+                  <i class="bi bi-telephone"></i>
+                  <span>For Booking</span>
+                </div>
+              </div>
+              <a href="https://maps.app.goo.gl/rtBipUZq3HRaAD7N7 " target="_blank">
+              <img src="uppercrest.jpg" class="image-placeholder"></a>
+            </div>
+          </div>
+      
+          <!-- Hotel Card 2 -->
+          <div class="col-md-6">
+            <div class="hotel-card">
+              <div class="hotel-details">
+                <div class="hotel-name">Hotel Moriah Inn Rooms Pala </div>
+                <div class="location">Kottayam,palai</div>
+                <div class="stars">★ ★ ★ ★ </div>
+                <div class="for-booking">
+                  <i class="bi bi-telephone"></i>
+                  <span>For Booking</span>
+                </div>
+              </div>
+              <a href="https://maps.app.goo.gl/AkQA4rNzKXR7AKhk9" target="_blank">
+              <img src="moriah.jpg" class="image-placeholder"></a>
+            </div>
+          </div>
+      
+          <!-- Hotel Card 3 -->
+          <div class="col-md-6">
+            <div class="hotel-card">
+              <div class="hotel-details">
+                <div class="hotel-name">Windrose Nest Pala</div>
+                <div class="location">Palai</div>
+                <div class="stars">★ ★ ★ ★ </div>
+                <div class="for-booking">
+                  <i class="bi bi-telephone"></i>
+                  <span>For Booking</span>
+                </div>
+              </div>
+              <a href="https://maps.app.goo.gl/oXVucXrM2oCvc1Gx5" target="_blank">
+              <img src="imgg.jpg" class="image-placeholder"></a>
+            </div>
+          </div>
+      
+          <!-- Hotel Card 4 -->
+          <div class="col-md-6">
+            <div class="hotel-card">
+              <div class="hotel-details">
+                <div class="hotel-name">Sunstar Residency & Food Plaza Pala</div>
+                <div class="location">Palai</div>
+                <div class="stars">★ ★ ★ ★ </div>
+                <div class="for-booking">
+                  <i class="bi bi-telephone"></i>
+                  <span>For Booking</span>
+                </div>
+              </div>
+              <a href="https://maps.app.goo.gl/fdAsdVYn9RXXf2CD7" target="_blank">
+              <img src="im.jpg" class="image-placeholder"></a>
+            </div>
+          </div>
+      
+          <!-- Hotel Card 5 -->
+          <div class="col-md-6">
+            <div class="hotel-card">
+              <div class="hotel-details">
+                <div class="hotel-name">Sanjos Residency</div>
+                <div class="location">Ettumanoor</div>
+                <div class="stars">★ ★ ★ </div>
+                <div class="for-booking">
+                  <i class="bi bi-telephone"></i>
+                  <span>For Booking</span>
+                </div>
+              </div>
+              <a href="https://maps.app.goo.gl/vdM5Q3dRfcna9Uqy6" target="_blank">
+              <img src="ett.jpg" class="image-placeholder"></a>
+            </div>
+          </div>
+      
+          <!-- Hotel Card 6 -->
+          <div class="col-md-6">
+            <div class="hotel-card">
+              <div class="hotel-details">
+                <div class="hotel-name">Hotel Olive international</div>
+                <div class="location">Palai</div>
+                <div class="stars">★ ★ ★ ★ ★</div>
+                <div class="for-booking">
+                  <i class="bi bi-telephone"></i>
+                  <span>For Booking</span>
+                </div>
+              </div>
+              <a href="https://maps.app.goo.gl/nrXumZ39ADzcxtWP7" target="_blank">
+              <img src="./Olive.jpg" class="image-placeholder "></a>
+            </div>
+          </div>
+      
+          <!-- Hotel Card 7 -->
+          <div class="col-md-6">
+            <div class="hotel-card">
+              <div class="hotel-details">
+                <div class="hotel-name">Daan Orchid Residency</div>
+                <div class="location">Kottayam</div>
+                <div class="stars">★ ★ ★ ★ ★</div>
+                <div class="for-booking">
+                  <i class="bi bi-telephone"></i>
+                  <span>For Booking</span>
+                </div>
+              </div>
+              <a href=" https://maps.app.goo.gl/4xsnEfbgH5eGrcDR9" target="_blank">
+                <img src="d.jpg" class="image-placeholder "></a>
+              </a>
+                </div>
+          </div>
+          
+      
+          <!-- Hotel Card 8 -->
+          <div class="col-md-6">
+            <div class="hotel-card">
+              <div class="hotel-details">
+                <div class="hotel-name">Hotel Malika Residency</div>
+                <div class="location">Ettumanoor</div>
+                <div class="stars">★ ★ ★ ★ </div>
+                <div class="for-booking">
+                  <i class="bi bi-telephone"></i>
+                  <span>For Booking</span>
+                </div>
+              </div>
+              <a href="https://maps.app.goo.gl/JwZ9mV3unineiaKBA" target="_blank">
+                <img src="mali.jpg" class="image-placeholder "></a>
+              </a></div>
+          </div>
+        </div>
+      </div>
+      
+
+      <h2 class=" d-flex align-items-center justify-content-center mt-5 " style="color: #333;">Nearest Transport Hubs</h2>
+      <div class="container station mt-5">
+        <div class="card nearest-bus-station" style="border-radius: 5%;">
+            <h3>Nearest Bus Station</h3>
+            <ul>
+                <li>Pala - <a href="https://maps.app.goo.gl/nqEZdnewiWZ2uCvw7" target="_blank">View on Map</a></li> 
+                <li>Eratupetta - <a href="https://maps.app.goo.gl/wTemxvE35vXLPhFZ6" target="_blank">View on Map</a></li>
+                <li>Kochi - <a href="https://maps.app.goo.gl/3Ls8sXqd2NhXEkua6" target="_blank">View on Map</a></li>
+                <li>Kottayam - <a href="https://maps.app.goo.gl/n1YCJdoiXuWE8nqQ6" target="_blank">View on Map</a> </li>
+            </ul>
+        </div>
+    
+        <div class="card nearest-airport" style="border-radius: 5%;">
+            <h3>Nearest Airport</h3>
+            <ul>
+              
+                <li>Kochi - <a href="https://maps.app.goo.gl/fmA7g7RDALEVDXs38">View on Map</a></li>
+                
+                
+            </ul>
+        </div>
+    
+        <div class="card nearest-railway" style="border-radius: 5%;">
+            <h3>Nearest Railway</h3>
+            <ul>
+               
+                <li>Kottayam - <a href="https://maps.app.goo.gl/BfGCzPbfir3y94Rm6 " >View on Map</a></li>
+                <li>Kochi1 - <a href="https://maps.app.goo.gl/jDJRjvUWUYfNXp7A8">View on Map</a></li>
+                <li>Kochi2 - <a href="https://maps.app.goo.gl/2e5dEr3yZh5Ha2vY7 ">View on Map</a></li>
+            </ul>
+        </div>
+    </div>
+
+     <!-- Footer -->
+   <footer class="footer mw-100 p-0 mt-5">
+    <div class="container mw-100" style="background-color: black;">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="./images/asmelogo.png" alt="Logo" class="ml-auto mr-auto d-flex justify-content-center align-items-center" style="width:230px;height: 200px; margin-top: 5rem;">
+            </div>
+            <div class="col-md-4 text-center d-block justify-content-center align-items-center" style="margin-left: 1rem; margin-top: 5rem; font-size: large;">
+                <ul class="list-unstyled text-white">
+                    <li class="mr-md-3"><a href="index.html" class="text-white">Home</a></li>
+                    <li class="mr-md-3 mt-2"><a href="team.html" class="text-white">Team</a></li>
+                    <li class="mr-md-3 mt-2"><a href="events&achievement.html" class="text-white">Events & Achievements</a></li>
+                    <li class="mr-md-3 mt-2"><a href="gallery.html" class="text-white">Gallery</a></li>
+                    <li class=" mr-md-3 mt-2"><a href="contact.html" class="text-white">Contact</a></li>
+                </ul>
+                <div class="social-icons mt-5 col-md-12" style="font-size: x-large;">
+                    <a href="https://wa.link/h1935h" target="_blank" class="icon"><i class="fab fa-whatsapp text-white p-1"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=asmesjcet@gmail.com" target="_blank" class="icon">
+                        <i class="fas fa-envelope text-white p-1" aria-hidden="true"></i>
+                        <span class="sr-only">Email us</span>
+                    </a>
+                    <a href="https://www.instagram.com/asme_sjcet/" target="_blank" class="icon"><i class="fab fa-instagram text-white p-1"></i></a>
+                    <a href="https://www.linkedin.com/company/asme-sjcet-student-chapter/" target="_blank" class="icon"><i class="fab fa-linkedin text-white p-1"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 text-center d-block justify-content-center align-items-center">
+                <div class="map-container" style="max-height: 70px; margin-top: 3rem;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.46233985586!2d76.72351987507453!3d9.726846690365058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07cc024cb7c83f%3A0xc8944aaebb3ba492!2sSt.%20Joseph&#39;s%20College%20of%20Engineering%20and%20Technology%2C%20Palai!5e0!3m2!1sen!2sin!4v1718524825457!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <p class="text-white" style="font-size: small; margin-top: 10rem;">PPHG+4GR, Bharananganam Pravithanam Road Kottayam, Palai, Choonducherry, Kerala 686579</p>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
