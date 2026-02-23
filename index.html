@@ -641,123 +641,100 @@
     </section>
 
 
-    <section class="latest ">
-        <div class="row d-flex justify-content-center align-items-center mw-100">
-            <div class="col-12 d-flex justify-content-center align-items-center p-lg-0 pl-5 mb-2">
-                <h2 class="custhead " style="font-weight: bold; color:#00000077; font-size: 50px;">Latest News</h2>
-            </div>
+    <style>
+    /* Hides the scrollbar and keeps the panel contained */
+    .gallery1 {
+        overflow: hidden;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    /* Sets up the flexbox row and the rolling animation */
+    .cards1 {
+        display: flex;
+        width: max-content;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        animation: rollLeft 30s linear infinite;
+    }
+
+    /* Optional: Pauses the rolling when a user hovers over an image */
+    .cards1:hover {
+        animation-play-state: paused;
+    }
+
+    /* Ensures the cards keep their shape and don't shrink */
+    .cards1 li {
+        flex: 0 0 auto;
+    }
+
+    /* The animation keyframes */
+    @keyframes rollLeft {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); } 
+        /* Scrolls exactly half the width (which is one full set of your images) */
+    }
+</style>
+
+<section class="latest">
+    <div class="row d-flex justify-content-center align-items-center mw-100">
+        <div class="col-12 d-flex justify-content-center align-items-center p-lg-0 pl-5 mb-2">
+            <h2 class="custhead" style="font-weight: bold; color:#00000077; font-size: 50px;">Latest News</h2>
         </div>
-         <div class="container mw-100 p-0">
-            <div class="row mw-100 mt-1">
-                <div class="col p-0">
-                    <div class="gallery-container1">
-                        <div class="gallery1">
-                            <ul class="cards1">
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/eonyx.jpeg" class="card-img-top flex-fill" alt="...">
-                                    </div>
-                                </li>
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/a5.jpg" class="card-img-top flex-fill" alt="...">
-                                    </div>
-                                </li> 
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/a3.jpg" class="card-img-top flex-fill" alt="...">
-                                    </div>
-                                </li> 
-                                 <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/a4.jpg" class="card-img-top flex-fill" alt="...">
-                                    </div>
-                                </li> 
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/p.jpg" class="card-img-top flex-fill" alt="...">
-                                    </div>
-                                </li> 
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/a1.jpg" class="card-img-top flex-fill" alt="...">
-                                    </div>
-                                </li> 
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/a2.jpg" class="card-img-top flex-fill" alt="...">
-                                    </div>
-                                </li> 
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/achieve19.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                </li>
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/achieve15.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                </li>
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/achieve14.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                </li>
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/achieve13.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                </li>
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/achieve12.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                </li>
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/achieve4.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                </li>
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/asmebagged.jpeg" class="card-img-top flex-fill" alt="...">
-                                    </div>
-                                </li>
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/congrats.jpeg" class="card-img-top flex-fill" alt="...">
-                                    </div>
-                                </li>
-                                
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/achieve3.jpg" class="card-img-top" alt="...">
-                                    </div>
-                                </li>
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/edisoncer.png" class="card-img-top" alt="...">
-                                    </div>
-                                </li>
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/achieve24.jpeg" class="card-img-top flex-fill" alt="...">
-                                    </div>
-                                </li> 
-                                <li class="ml-4 mb-2 ">
-                                    <div class="card" style="width: 18rem; height: 18rem;">
-                                        <img src="./images/achieve20.jpg" class="card-img-top flex-fill" alt="...">
-                                    </div>
-                                </li>
-                               
-                               
-                            </ul>
-                        </div>
+    </div>
+    <div class="container mw-100 p-0">
+        <div class="row mw-100 mt-1">
+            <div class="col p-0">
+                <div class="gallery-container1">
+                    <div class="gallery1">
+                        <ul class="cards1">
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/eonyx.jpeg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/a5.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/a3.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/a4.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/p.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/a1.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/a2.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve19.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve15.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve14.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve13.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve12.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve4.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/asmebagged.jpeg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/congrats.jpeg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve3.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/edisoncer.png" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve24.jpeg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve20.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/eonyx.jpeg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/a5.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/a3.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/a4.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/p.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/a1.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/a2.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve19.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve15.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve14.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve13.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve12.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve4.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/asmebagged.jpeg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/congrats.jpeg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve3.jpg" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/edisoncer.png" class="card-img-top" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve24.jpeg" class="card-img-top flex-fill" alt="..."></div></li>
+                            <li class="ml-4 mb-2"><div class="card" style="width: 18rem; height: 18rem;"><img src="./images/achieve20.jpg" class="card-img-top flex-fill" alt="..."></div></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-
+    </div>
+    
         <div class="row mw-100 mt-5 mx-5 px-5 justify-content-center">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
                 <div style="position: relative; width: 100%;">
