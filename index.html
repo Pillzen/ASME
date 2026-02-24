@@ -703,75 +703,112 @@
         </div>
     </div>
     
-        <div class="row mw-100 mt-5 mx-5 px-5 justify-content-center">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
-                <div style="position: relative; width: 100%;">
-                    <img src="./images1/efxlive.png" alt="EFX Live 1" class="img-fluid">
-                    <div class="efx">
-                        <div class="button-container">
-                            <div class="button-bg"></div>
-                            <a href="https://bit.ly/efxsjcet2026" target="_blank" class="button-text">https://bit.ly/efxsjcet2026</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
-    <div style="position: relative; width: 100%;">
-        <img src="./images1/efx4.jpeg" alt="IAM 3D" class="img-fluid">
-        <div class="efx4" style="position: absolute; bottom: 5%; left: 0; width: 100%; display: flex; justify-content: center; z-index: 10;">
-            <div class="button-container2" style="text-align: center; display: flex; justify-content: center; align-items: center;">
-                <div class="button-bg2"></div>
-                <a href="https://bit.ly/efxsjcet2026" target="_blank" class="button-text2">https://bit.ly/efxsjcet2026</a>
-            </div>
-        </div>
-    </div>
-</div>
+       <style>
+    /* 1. Smooth Floating Card Effect */
+    .event-card {
+        border-radius: 16px;
+        overflow: hidden; /* Keeps the zoom inside the rounded corners */
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: all 0.4s ease;
+        background: #fff; /* Fallback */
+    }
+    
+    .event-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
-    <div style="position: relative; width: 100%;">
-        <img src="./images1/efx6.png" alt="talk" class="img-fluid">
-        <div class="efx4" style="position: absolute; bottom: 10%; left: 40%; transform: translateX(-50%); width: 65%; text-align: center; z-index: 10;">
-            <div class="button-container2">
-                <div class="button-bg2"></div>
-                <a href="https://bit.ly/efxsjcet2026" target="_blank" class="button-text2">https://bit.ly/efxsjcet2026</a>
+    /* 2. Subtle Image Zoom on Hover */
+    .event-card img {
+        transition: transform 0.5s ease;
+        display: block; /* Removes bottom spacing bugs */
+    }
+    
+    .event-card:hover img {
+        transform: scale(1.04);
+    }
+
+    /* 3. Modern Glassmorphism Button */
+    .glass-btn {
+        background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+        backdrop-filter: blur(8px); /* The frosted glass blur */
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.4); /* Light border for edge highlight */
+        border-radius: 30px;
+        padding: 10px 24px;
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Keeps text readable on light posters */
+        display: inline-block;
+    }
+
+    .glass-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        color: #ffffff;
+        text-decoration: none;
+        transform: scale(1.05); /* Button grows slightly when hovered */
+    }
+</style>
+
+<div class="row mw-100 mt-5 mx-5 px-5 justify-content-center">
+    
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
+        <div class="event-card" style="position: relative; width: 100%;">
+            <img src="./images1/efxlive.png" alt="EFX Live 1" class="img-fluid">
+            <div style="position: absolute; bottom: 8%; width: 100%; display: flex; justify-content: center; z-index: 10;">
+                <a href="https://bit.ly/efxsjcet2026" target="_blank" class="glass-btn">Register Now &rarr;</a>
             </div>
         </div>
     </div>
-</div>
             
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
-    <div style="position: relative; width: 100%;">
-        <img src="./images1/efx5.jpeg" alt="quiz" class="img-fluid">
-        <div class="efx4" style="position: absolute; bottom: 15%; left: 0; width: 100%; display: flex; justify-content: center; z-index: 10;">
-            <div class="button-container2" style="text-align: center; display: flex; justify-content: center; align-items: center;">
-                <div class="button-bg2"></div>
-                <a href="https://bit.ly/efxsjcet2026" target="_blank" class="button-text2">https://bit.ly/efxsjcet2026</a>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
+        <div class="event-card" style="position: relative; width: 100%;">
+            <img src="./images1/efx4.jpeg" alt="IAM 3D" class="img-fluid">
+            <div style="position: absolute; bottom: 8%; width: 100%; display: flex; justify-content: center; z-index: 10;">
+                <a href="https://bit.ly/efxsjcet2026" target="_blank" class="glass-btn">Register Now &rarr;</a>
             </div>
         </div>
     </div>
-</div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
-    <div style="position: relative; width: 100%;">
-        <img src="./images1/efx7.jpeg" alt="nova glide" class="img-fluid">
-        <div class="efx4" style="position: absolute; bottom: 20%; left: 0; width: 100%; display: flex; justify-content: center; z-index: 10;">
-            <div class="button-container2" style="text-align: center; display: flex; justify-content: center; align-items: center;">
-                <div class="button-bg2"></div>
-                <a href="https://bit.ly/efxsjcet2026" target="_blank" class="button-text2">https://bit.ly/efxsjcet2026</a>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
+        <div class="event-card" style="position: relative; width: 100%;">
+            <img src="./images1/efx6.png" alt="talk" class="img-fluid">
+            <div style="position: absolute; bottom: 10%; left: 40%; transform: translateX(-50%); z-index: 10;">
+                <a href="https://bit.ly/efxsjcet2026" target="_blank" class="glass-btn">Register Now &rarr;</a>
             </div>
         </div>
     </div>
-</div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
-    <div style="position: relative; width: 100%;">
-        <img src="./images1/efx8.jpeg" alt="workshop" class="img-fluid">
-        <div class="efx4" style="position: absolute; bottom: 1%; left: 0; width: 100%; display: flex; justify-content: center; z-index: 10;">
-            <div class="button-container2" style="text-align: center; display: flex; justify-content: center; align-items: center;">
-                <div class="button-bg2"></div>
-                <a href="https://bit.ly/efxsjcet2026" target="_blank" class="button-text2">https://bit.ly/efxsjcet2026</a>
+            
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
+        <div class="event-card" style="position: relative; width: 100%;">
+            <img src="./images1/efx5.jpeg" alt="quiz" class="img-fluid">
+            <div style="position: absolute; bottom: 15%; width: 100%; display: flex; justify-content: center; z-index: 10;">
+                <a href="https://bit.ly/efxsjcet2026" target="_blank" class="glass-btn">Register Now &rarr;</a>
             </div>
         </div>
     </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
+        <div class="event-card" style="position: relative; width: 100%;">
+            <img src="./images1/efx7.jpeg" alt="nova glide" class="img-fluid">
+            <div style="position: absolute; bottom: 10%; width: 100%; display: flex; justify-content: center; z-index: 10;">
+                <a href="https://bit.ly/efxsjcet2026" target="_blank" class="glass-btn">Register Now &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 mx-3">
+        <div class="event-card" style="position: relative; width: 100%;">
+            <img src="./images1/efx8.jpeg" alt="workshop" class="img-fluid">
+            <div style="position: absolute; bottom: 8%; width: 100%; display: flex; justify-content: center; z-index: 10;">
+                <a href="https://bit.ly/efxsjcet2026" target="_blank" class="glass-btn">Register Now &rarr;</a>
+            </div>
+        </div>
+    </div>
+
 </div>
 </section>
 
